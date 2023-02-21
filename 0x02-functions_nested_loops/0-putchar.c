@@ -2,7 +2,7 @@
  * file-name: 0-putchar.c
  */
 
-#include <stdio.h>
+#include <main.h>
 
 /**
  * main - Prints _putchar
