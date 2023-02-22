@@ -2,7 +2,6 @@
  * file-name: 0-putchar.c
  */
 
-#include <main.h>
 #include <unistd.h>
 
 /**
