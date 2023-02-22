@@ -1,17 +1,26 @@
 /*
- * file-name: 0-putchar.c
+ * file-namea: 0-putchar.c
  */
 
-#include <unistd.h>
+#include "main.h"
 
 /**
- * putchar - Prints an individual character from putchar
+ * _putchar: writes the characters onto stdout.
  *
- * Return: if successful it returns 1.
+ * Return: Always 0.
  */
 
-int _putchar(char c)
+int main(void)
 {
-	return (write(1, &c, 1));
-}
+	_putchar('-');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
 
+	_putchar('\n');
+	return(0);
+}
