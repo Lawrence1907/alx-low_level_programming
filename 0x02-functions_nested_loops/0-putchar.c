@@ -5,7 +5,7 @@
 #include "main.h"
 
 /**
- * main: writes the characters onto stdout.
+ * main - writes the characters onto stdout.
  *
  * Return: Always 0.
  */
