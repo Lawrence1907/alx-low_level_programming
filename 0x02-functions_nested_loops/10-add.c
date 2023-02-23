@@ -4,6 +4,7 @@
  * add - Adds two integers.
  * @y: integer to be added.
  * @z: integer to be added.
+ *
  * Return: sum of y and z.
  */
 
