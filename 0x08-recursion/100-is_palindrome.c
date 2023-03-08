@@ -11,7 +11,7 @@
 
 int palind(char *a, int l)
 {
-	if ( *a == 0)
+	if (*a == 0)
 		return (l - 1);
 	return (palind(a + 1, l + 1));
 }
