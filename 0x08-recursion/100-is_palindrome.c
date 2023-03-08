@@ -9,29 +9,33 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 
-int palind(char *a, int l)
+int palind(char *a)
 {
-	if (*a == 0)
-		return (l - 1);
-	return (palind(a + 1, l + 1));
+	if (*a == '\0')
+		return (0);
+	else
+		return (1 + palind(a + 1));
 }
 
 /**
  * palind2 - compares string vs string reverse.
  * @a: string
- * @l: length
+ * @n1: smallest iterator.
+ * @n2: biggest iterator.
  *
  * Return: 1, On success.
  * On error, -1 is returned, and errno is set appropriately.
  */
 
-int palind2(char *a, int l)
+int palind2(char *a, int n1, int n2)
 {
-	if (*a != *(a + 1))
-		return (0);
-	else if (*a == 0)
-		return (1);
-	return (palind2(a + 1, l - 2));
+	if (*(a + n1) == *(a + n2))
+	{
+		if (n1 == n2 || n2 + 1)
+			return (1);
+		return (0 + palind2(a, n1 + 1, n2 - 1));
+	}
+	return (0);
 }
 
 /**
@@ -44,8 +48,7 @@ int palind2(char *a, int l)
 
 int is_palindrome(char *s)
 {
-	int l;
-
-	l = palind(s, 0);
-	return (palind2(s, l));
+	if (*s == '\0')
+		return (1);
+	return (palind2(s, 0, palind(s) - 1));
 }
