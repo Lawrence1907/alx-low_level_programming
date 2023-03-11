@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 
 	while (count < argc) /*goes though the whole array*/
 	{
-		if (check_nm(argv[count]))
+		if (check_num(argv[count]))
 		{
 			str_to_int = atoi(argv[count]); /*converts string to int*/
 			sum += str_to _int;
